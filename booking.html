@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Booking</title>
+  <!-- tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Gilda+Display&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Knewave&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,500;1,500&family=Nunito+Sans:opsz,wght@6..12,200..1000&family=Play:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Qwigley&display=swap"
+    rel="stylesheet">
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- style -->
+  <style>
+    h1,
+    h4 {
+      color: rgb(255, 255, 255);
+    }
+
+    .h1 {
+      font-size: 35px;
+
+    }
+
+    .h4 {
+      font-family: "Qwigley", serif;
+      font-size: 30px;
+    }
+
+    .btn {
+      background-color: rgb(154, 126, 88);
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: rgb(154, 126, 88);
+      border: 2px dotted rgb(154, 126, 88);
+      transition: .3s ease;
+    }
+
+    footer {
+      font-family: "Montserrat", serif;
+      background-color: rgb(248, 241, 233);
+      padding: 20px;
+    }
+
+    .foot-h3 {
+      color: rgb(164, 150, 130);
+    }
+
+    .foot-icon i {
+      color: orange;
+    }
+
+    .foot-icon i:hover {
+      color: rgb(231, 213, 191);
+      transition: 0.3s ease;
+    }
+
+    .foot-a a:hover {
+      color: orange;
+      transition: 0.3s ease;
+    }
+
+    century-gothic {
+      font-family: 'Century Gothic', sans-serif;
+    }
+
+    .header-bg {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/free-photo/decorated-hall-event_8353-10238.jpg?t=st=1738251768~exp=1738255368~hmac=a69f28d20ea9e2949279ee8d9c59317b2ea4e88236b43bb1fd3e1c8d0cd0d69a&w=996);
+    }
+
+    /* Mobile menu toggle */
+    #menu-toggle:checked~#mobile-menu {
+      display: block;
+    }
+
+    /* Dropdown menu */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .team-card:hover,
+    .review-card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class=" bg-gray-100">
+
+  <section id="header">
+    <header class="header-bg bg-cover bg-center h-screen relative overflow-hidden">
+      <div class="max-w-[1200px] mx-auto px-3">
+        <!-- Navigation -->
+        <nav class="flex items-center justify-between pt-6">
+          <!-- Logo -->
+          <div class="">
+            <h1 class="text-white text-5xl"><b>V</b>isual <b>E</b>vents</h1>
+
+
+          </div>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex gap-4 text-white">
+            <li><a href="./index.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">HOME</a></li>
+            <li><a href="./About.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">ABOUT US</a>
+            </li>
+            <li class="relative dropdown">
+              <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                SERVICES <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="absolute hidden dropdown-menu bg-[00FFFFFF] min-w-[160px]">
+                <ul class="py-2">
+                  <li><a href="./wedding.html" class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a></li>
+                  <li><a href="./birthday.html" class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a>
+                  </li>
+                  <li><a href="./workshop_seminars.html"
+                      class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP & SEMINAR</a></li>
+                  <li><a href="./corporate.html" class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE
+                      EVENTS</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="./gallery.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">GALLERY</a>
+            </li>
+            <li><a href="./contact.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">CONTACT
+                US</a></li>
+          </ul>
+          <div class="flex md:order-2 space-x-5 md:space-x-5 rtl:space-x-reverse">
+            <button type="button"
+              class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a
+                href="login.html">Login</a></button>
+          </div>
+
+
+          <!-- Navigation -->
+          <nav class="flex items-center justify-between pt-8 relative">
+            <!-- Logo -->
+            <!-- Mobile Menu Button -->
+            <label for="menu-toggle" class="md:hidden text-white text-2xl cursor-pointer">☰</label>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-4 text-white">
+              <!-- ... desktop menu items same as before ... -->
+            </ul>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#002d75]/90 mt-4">
+              <ul class="flex flex-col items-center gap-4 text-white py-4">
+                <li class="w-full text-center">
+                  <a href="./index.html" class="block py-2 hover:bg-white hover:text-black">HOME</a>
+                </li>
+                <li class="w-full text-center">
+                  <a href="./About.html" class="block py-2 hover:bg-white hover:text-black">ABOUT US</a>
+                </li>
+                <li class="relative dropdown">
+                  <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                    SERVICES <i class="fa fa-caret-down"></i>
+                  </a>
+                  <div class="absolute hidden dropdown-menu bg-[#002d75] min-w-[160px]">
+                    <ul class="py-2">
+                      <li><a href="./wedding.html" class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a>
+                      </li>
+                      <li><a href="./birthday.html" class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a>
+                      </li>
+                      <li><a href="./workshop_seminars.html"
+                          class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP & SEMINAR</a></li>
+                      <li><a href="./corporate.html" class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE
+                          EVENTS</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="w-full text-center">
+                  <a href="./gallery.html" class="block py-2 hover:bg-white hover:text-black">GALLERY</a>
+                </li>
+                <li class="w-full text-center">
+                  <a href="./contact.html" class="block py-2 hover:bg-white hover:text-black">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+
+          </nav>
+          <!-- Title Section -->
+          <div class=" font-serif text-white  absolute top-[9rem] mt-28 left-20">
+            <h1 class="font-extrabold text-4xl mb-5 ms-28">
+              <span class="block">We can’t wait to hear from you!</span>
+              <span class="block">We are currently accepting clients for full-service planning.</span>
+            </h1>
+            <h4 class="font-mono mt-12 max-w-4xl left-20 ms-28">
+              Kerala's #1 Exclusive Event Company
+            </h4>
+            <div class="ms-28 ps-24 ">
+              <div class="flex ms-28 ps-28 mt-10 left-28">
+                <button type="button"
+                  class="text-white  font-medium rounded-lg text-7xl ps-28 py-2.5 text-center ms-28 me-2 mb-2 rounded-full"><a
+                    href="#Booknow"><i class="fa-solid fa-arrow-down mt-28"></i></a></button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </header>
+  </section>
+
+  <br>
+  <!-- form -->
+  <section class="bg-gray-100 flex items-center justify-center" id="Booknow">
+    <div class="bg-white p-8 rounded-lg shadow-md w-75 ">
+      <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Book Your Event</h2>
+      <form>
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Full Name</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg" placeholder="Enter your name" required>
+        </div>
+
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Email</label>
+          <input type="email" class="w-full px-4 py-2 border rounded-lg " placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Phone Number</label>
+          <input type="tel" class="w-full px-4 py-2 border rounded-lg " placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Event Type</label>
+          <select class="w-full px-4 py-2 border rounded-lg " required>
+            <option>Wedding</option>
+            <option>Birthday Party</option>
+            <option>Corporate Event</option>
+            <option>Concert</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Event Date</label>
+          <input type="date" class="w-full px-4 py-2 border rounded-lg " required>
+        </div>
+
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Venue Location</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg" required>
+        </div>
+
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Estimated Headcount</label>
+          <input type="number" class="w-full px-4 py-2 border rounded-lg " required>
+        </div>
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium">Where do you reside?</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg " required>
+        </div>
+
+        <div class="mb-4">
+          <label class=" text-gray-600 font-medium pb-2">Please share any information or inspiration you have for your
+            dream event!</label>
+          <textarea class="w-full px-4 py-2 border rounded-lg " placeholder="Message"></textarea>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <button type="submit" class="w-55 p-5  text-white py-2 rounded-lg btn">Submit Booking</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <br>
+  <hr>
+
+  <!-- footer -->
+  <footer class=" ">
+    <div class="flex flex-col justify-center items-center px-5 pt-5">
+      <!-- row 1 -->
+      <h3 class="p-3 text-xl foot-h3">STAY SOCIAL</h3>
+
+      <div class="space-x-5 p-3 text-lg foot-icon">
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <p class="p-3 w-100 text-center text-md">
+        We’re dream weavers, memory makers, and celebration architects. With
+        over 500 successful events, we blend creativity, technology, and
+        passion to deliver extraordinary experiences that exceed expectations.
+        From premium corporate events and destination wedding planning to
+        small-scale birthday parties and private gatherings, you can be sure
+        we have it all covered.
+      </p>
+
+      <!-- row 2 -->
+
+      <div class="flex space-x-[200px] m-12">
+        <!-- quick link -->
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">QUICK LINKS</h5>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#service">Services</a>
+        </div>
+
+        <!-- other link -->
+
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">OTHER LINKS</h5>
+          <a href="#">Blog</a>
+          <a href="">Testimonials</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Refund Policy</a>
+        </div>
+
+        <!-- contact info -->
+
+        <div class="flex flex-col space-y-5 foot-a">
+          <h5 class="text-2xl mb-3">CONTACT INFO</h5>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-location-dot text-2xl basis-auto"></i>
+            <p class="basis-auto pl-3 w-50">
+              COCHIN BRANCH XYZ Event <br />Management, Kochi, Kerala, 682037
+            </p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-phone basis-auto"></i>
+            <p class="basis-auto pl-3">+123,456,789</p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-envelope basis-auto"></i>
+            <p class="basis-auto pl-3">xyz@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <hr style="width: 100%; height: 2px; background-color: rgb(164, 150, 130)" />
+      <p class="pt-2">© 2025, XYZ Events, All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

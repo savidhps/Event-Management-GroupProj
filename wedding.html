@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wedding</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* From Uiverse.io by satyamchaudharydev */
+        .button {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            padding-block: 0.5rem;
+            padding-inline: 1.25rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffff;
+            gap: 10px;
+            font-weight: bold;
+            border: 3px solid #ffffff4d;
+            outline: none;
+            overflow: hidden;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn-1 {
+            background-image: linear-gradient(120deg, #c8a1e0 0%, #674188 100%);
+        }
+
+        .btn-2 {
+
+            background-image: linear-gradient(120deg, #10aa1d 0%, #674188 100%);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            border-color: #fff9;
+        }
+
+
+        .button:hover::before {
+            animation: shine 1.5s ease-out infinite;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            background-image: linear-gradient(120deg,
+                    rgba(255, 255, 255, 0) 30%,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0) 70%);
+            top: 0;
+            left: -100px;
+            opacity: 0.6;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100px;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        input {
+            width: 400px;
+            height: 40px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+        }
+
+        /* From Uiverse.io by kamehame-ha */
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 15px;
+            gap: 15px;
+            background-color: rgb(188, 82, 188);
+            outline: 3px white;
+            outline-offset: -3px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 400ms;
+            width: 150px;
+        }
+
+        .btn .text {
+            color: white;
+            font-weight: 700;
+            font-size: 1em;
+            transition: 400ms;
+        }
+
+
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        .btn:hover .text {
+            color: #181717;
+        }
+
+        footer {
+            font-family: "Montserrat", serif;
+            background-color: rgb(248, 241, 233);
+            padding: 20px;
+        }
+
+        .foot-h3 {
+            color: rgb(164, 150, 130);
+        }
+
+        .foot-icon i {
+            color: orange;
+        }
+
+        .foot-icon i:hover {
+            color: rgb(231, 213, 191);
+            transition: 0.3s ease;
+        }
+
+        .foot-a a:hover {
+            color: orange;
+            transition: 0.3s ease;
+        }
+
+        .century-gothic {
+            font-family: 'Century Gothic', sans-serif;
+        }
+
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://lirp.cdn-website.com/28cd0bb4/dms3rep/multi/opt/traditional+american+wedding-1920w.jpeg);
+        }
+
+        /* Mobile menu toggle */
+        #menu-toggle:checked~#mobile-menu {
+            display: block;
+        }
+
+        /* Dropdown menu */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .team-card:hover,
+        .review-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header section  -->
+    <section id="header">
+        <header class="header-bg bg-cover bg-center h-screen relative overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-3">
+                <!-- Navigation -->
+                <nav class="flex items-center justify-between pt-6">
+                    <!-- Logo -->
+                    <div class="">
+                        <h1 class="text-white text-5xl"><b>V</b>isual <b>E</b>vents</h1>
+
+
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex gap-4 text-white">
+                        <li><a href="./index.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">HOME</a></li>
+                        <li><a href="./About.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">ABOUT US</a></li>
+                        <li class="relative dropdown">
+                            <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                                SERVICES <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="absolute hidden dropdown-menu bg-[00FFFFFF] min-w-[160px]">
+                                <ul class="py-2">
+                                    <li><a href="./wedding.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a></li>
+                                    <li><a href="./birthday.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a></li>
+                                    <li><a href="./workshop_seminars.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP &
+                                            SEMINAR</a></li>
+                                    <li><a href="./corporate.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE EVENTS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="./gallery.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">GALLERY</a></li>
+                        <li><a href="./contact.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">CONTACT US</a></li>
+                    </ul>
+                    <div class="flex md:order-2 space-x-5 md:space-x-5 rtl:space-x-reverse">
+                        <button type="button"
+                            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a
+                                href="login.html">Login</a></button>
+                    </div>
+
+
+                    <!-- Navigation -->
+                    <nav class="flex items-center justify-between pt-8 relative">
+                        <!-- Logo -->
+                        <!-- Mobile Menu Button -->
+                        <label for="menu-toggle" class="md:hidden text-white text-2xl cursor-pointer">☰</label>
+                        <input type="checkbox" id="menu-toggle" class="hidden">
+
+                        <!-- Desktop Menu -->
+                        <ul class="hidden md:flex gap-4 text-white">
+                            <!-- ... desktop menu items same as before ... -->
+                        </ul>
+
+                        <!-- Mobile Menu -->
+                        <div id="mobile-menu"
+                            class="hidden md:hidden absolute top-full left-0 right-0 bg-[#002d75]/90 mt-4">
+                            <ul class="flex flex-col items-center gap-4 text-white py-4">
+                                <li class="w-full text-center">
+                                    <a href="./index.html" class="block py-2 hover:bg-white hover:text-black">HOME</a>
+                                </li>
+                                <li class="w-full text-center">
+                                    <a href="./About.html" class="block py-2 hover:bg-white hover:text-black">ABOUT
+                                        US</a>
+                                </li>
+                                <li class="relative dropdown">
+                                    <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                                        SERVICES <i class="fa fa-caret-down"></i>
+                                    </a>
+                                    <div class="absolute hidden dropdown-menu bg-[#002d75] min-w-[160px]">
+                                        <ul class="py-2">
+                                            <li><a href="./wedding.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a>
+                                            </li>
+                                            <li><a href="./birthday.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a>
+                                            </li>
+                                            <li><a href="./workshop_seminars.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP &
+                                                    SEMINAR</a></li>
+                                            <li><a href="./corporate.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE
+                                                    EVENTS</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="w-full text-center">
+                                    <a href="./gallery.html"
+                                        class="block py-2 hover:bg-white hover:text-black">GALLERY</a>
+                                </li>
+                                <li class="w-full text-center">
+                                    <a href="./contact.html" class="block py-2 hover:bg-white hover:text-black">CONTACT
+                                        US</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                    <!-- Title Section -->
+                     <!-- Gradient overlay -->
+       
+
+        <!-- Text content -->
+        <div class=" font-serif text-white  absolute top-2/4 left-20">
+            <h1 class="font-extrabold text-5xl mb-5">
+                <span class="block">Kerala's #1 Wedding</span>
+                <span class="block">Photography & Videography</span>
+            </h1>
+            <h4 class="font-mono mt-12 max-w-4xl ">
+                Wedding photography in Kerala is a cherished art form that beautifully preserves the heartfelt moments
+                and timeless elegance of your special day. Our talented photographers skillfully capture your love
+                story, immortalizing every smile, every tear, and every precious memory to be treasured forever.
+            </h4>
+            <div class="flex space-x-3 mt-10">
+                <button class="button btn-1"><i aria-hidden="true" class="fas fa-phone-volume"></i>
+                    Talk to Expert
+                </button>
+                <button class="button btn-2"><i aria-hidden="true" class="fab fa-whatsapp"></i></i>
+                    Whatsapp Us
+                </button>
+            </div>
+        </div>
+        </header>
+    </section>
+    <!-- header end  -->
+
+    <hr>
+
+    <section>
+        <div class="flex mt-5 ml-20 h-[500px]">
+            <div class="mt-20">
+                <img src="https://cdn.pixabay.com/photo/2021/08/03/08/51/bride-6518871_640.jpg" class="w-4/5 h-5/5"
+                    alt="">
+            </div>
+            <div class="w-2/4 mt-20">
+                <h2 class="text-violet-900 text-xl">Have a ZING with Our Event Synch!</h2>
+                <h1 class="text-2xl mt-2 mb-2">Experience wedding photography in Kerala like never before, where stories
+                    come to life in breathtaking detail.</h1>
+                <p class="text-violet-950 mb-2">Wedding photography and videography are essential elements of any
+                    wedding ceremony, preserving the special moments and emotions of the day for the bride, groom, and
+                    their families to treasure forever. These timeless visuals become a cherished reminder of love, joy,
+                    and togetherness.</p>
+                <p class="text-violet-950 mb-2">A skilled wedding photographer goes beyond capturing pictures—they craft
+                    a visual narrative that reflects the emotions, excitement, and heartfelt moments of the occasion.
+                    Mastering the art of seizing candid expressions, they ensure every frame tells a story.</p>
+                <p class="text-violet-950 mb-2">With an eye for detail and expertise in handling diverse equipment,
+                    professional photographers excel in delivering high-quality images and videos. They adapt seamlessly
+                    to changing lighting conditions, weather, and schedules, ensuring every moment is beautifully
+                    documented.</p>
+            </div>
+        </div>
+        <div class=" flex mt-5 bg-red-50 h-[450px] ">
+            <div class="mt-20 ml-40 text-lg mr-10 text-slate-700 ">
+                <p>A wedding day begins with the photographer arriving early to document the preparations, focusing on
+                    meaningful details like the wedding attire, floral arrangements, and venue decor. Throughout the
+                    ceremony, the photographer remains discreet and unobtrusive, skillfully capturing the emotions of
+                    the couple and their families without interrupting the natural flow of events.</p>
+                <p class="mt-2">Following the ceremony, group portraits are taken with the couple, their families, and
+                    the wedding party. These carefully arranged shots ensure everyone is included and the lighting is
+                    ideal. During the reception, the photographer captures candid and heartfelt moments, such as the
+                    couple’s first dance, emotional speeches, and joyful interactions with guests, preserving the
+                    essence of the celebration.</p>
+            </div>
+            <div class="mt-20 mr-20 mb-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JdHAgfzWr0U?si=1qmi1prCE4kk_SNY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <section>
+        <div class="flex space-3 bg-fuchsia-900 h-[500px]">
+            <div class="text-neutral-100 w-[500px] mt-20 ml-60 ">
+                <h1 class="font-mono mt-5 max-w-4xl">Capture Your Perfect Wedding Moments with ####</h1>
+                <h1 class="font-extrabold text-4xl mb-5 mt-5">
+                    <span class="block">Book Your Kerala Wedding</span>
+                    <span class="block">Photographers Today!</span>
+                </h1>
+                <p class="font-mono mt-10 max-w-4xl">Contact us now to discuss your vision and secure the perfect
+                    photographer for your big day. Don’t wait—your happily-ever-after begins with Melodia!</p>
+            </div>
+            <div class="w-[500px] ml-40 mt-20">
+                <form action="">
+                    <input type="text" placeholder="Enter your Full Name"><br><br>
+                    <input type="text" placeholder="Enter your Phone Number"><br><br>
+                    <input type="email" placeholder="Enter your Email ID"><br><br>
+                    <textarea name="message" id="" placeholder="Message"></textarea><br><br>
+                    <!-- From Uiverse.io by kamehame-ha -->
+                    <button class="btn">
+                        <p class="text">Submit</p>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="text-center bg-orange-100 p-5">
+            <h1 class="font-bold text-xl p-5">OUR BLOGS & ARTICLES</h1>
+            <p class="w-2/3 mx-auto text-center">XYZ Event Management’s website offers stories and blogs on various
+                event management and photography services in Kerala, from venue selections and destination weddings to
+                corporate events and post-wedding photography, with useful tips to help you plan your next event
+                smoothly.</p>
+            <div class="flex space-x-8 item-center text-center justify-between ml-20 mr-20 mt-10  ">
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_640.jpg"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Wedding Photoshoot Poses for Couples: Timeless Ideas for Perfect Moments
+                    </p>
+                    <p class="pb-10 ">One of the most unforgettable events of your life is your wedding, and the</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500 ">Learn More >></a>
+                </div>
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://vendor.mschirpy.com/blogs/1699633310.jpg"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Bridal Makeup Trends You Need to Know in 2025
+                    </p>
+                    <p class="pb-10 ">The key to 2025 bridal makeup is embracing uniqueness and classic style. The
+                        popular</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500 ">Learn More >></a>
+                </div>
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/22/22/25/groom-1850932_1280.jpg"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Top Trending Groom Wedding Dresses in Kerala: A Blend of Tradition and
+                        Style
+                    </p>
+                    <p class="pb-10 ">Table of Contents
+                        On your wedding day, you want to look and feel your</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500 ">Learn More >></a>
+                </div>
+            </div>
+            <div class="flex space-x-8 item-center text-center justify-between ml-20 mr-20 mt-10  ">
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://cdn.pixabay.com/photo/2019/03/07/17/17/bride-4040677_640.jpg"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Top Bridal Hair Trends for 2025: Styles to Elevate Your Wedding Look
+                    </p>
+                    <p class="pb-10 ">Table of Contents
+                        On your wedding day, you want to look and feel your</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500 ">Learn More >></a>
+                </div>
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://cdn.pixabay.com/photo/2021/05/05/07/00/bride-6230420_1280.jpg"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Types of Women’s Wedding Dresses in Kerala Weddings
+                    </p>
+                    <p class="pb-10 ">Kerala weddings are a vibrant mashup of cultures, traditions, and beautiful</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500 ">Learn More >></a>
+                </div>
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/21/18/43/couple-2162950_640.jpg"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">How to Choose the Perfect Wedding Dress for Your Dreamy Wedding
+                    </p>
+                    <p class="pb-10 ">Table of Contents
+                        How to Choose the Perfect Wedding Dress in your special day</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500 ">Learn More >></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class=" ">
+        <div class="flex flex-col justify-center items-center px-5 pt-5">
+            <!-- row 1 -->
+            <h3 class="p-3 text-xl foot-h3">STAY SOCIAL</h3>
+
+            <div class="space-x-5 p-3 text-lg foot-icon">
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+
+            <p class="p-3 w-100 text-center text-md">
+                We’re dream weavers, memory makers, and celebration architects. With
+                over 500 successful events, we blend creativity, technology, and
+                passion to deliver extraordinary experiences that exceed expectations.
+                From premium corporate events and destination wedding planning to
+                small-scale birthday parties and private gatherings, you can be sure
+                we have it all covered.
+            </p>
+
+            <!-- row 2 -->
+
+            <div class="flex space-x-[200px] m-12">
+                <!-- quick link -->
+                <div class="grid grid-rows-5 pr-5 foot-a">
+                    <h5 class="text-2xl mb-3">QUICK LINKS</h5>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#service">Services</a>
+                </div>
+
+                <!-- other link -->
+
+                <div class="grid grid-rows-5 pr-5 foot-a">
+                    <h5 class="text-2xl mb-3">OTHER LINKS</h5>
+                    <a href="#">Blog</a>
+                    <a href="">Testimonials</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Refund Policy</a>
+                </div>
+
+                <!-- contact info -->
+
+                <div class="flex flex-col space-y-5 foot-a">
+                    <h5 class="text-2xl mb-3">CONTACT INFO</h5>
+
+                    <div class="flex items-center foot-icon">
+                        <i class="fa-solid fa-location-dot text-2xl basis-auto"></i>
+                        <p class="basis-auto pl-3 w-50">
+                            COCHIN BRANCH XYZ Event <br />Management, Kochi, Kerala, 682037
+                        </p>
+                    </div>
+
+                    <div class="flex items-center foot-icon">
+                        <i class="fa-solid fa-phone basis-auto"></i>
+                        <p class="basis-auto pl-3">+123,456,789</p>
+                    </div>
+
+                    <div class="flex items-center foot-icon">
+                        <i class="fa-solid fa-envelope basis-auto"></i>
+                        <p class="basis-auto pl-3">xyz@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="width: 100%; height: 2px; background-color: rgb(164, 150, 130)" />
+            <p class="pt-2">© 2025, XYZ Events, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

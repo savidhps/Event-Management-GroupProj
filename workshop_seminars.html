@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>workshop</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+          <!-- icon -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+        /* From Uiverse.io by satyamchaudharydev */
+        .button {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            padding-block: 0.5rem;
+            padding-inline: 1.25rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffff;
+            gap: 10px;
+            font-weight: bold;
+            border: 3px solid #ffffff4d;
+            outline: none;
+            overflow: hidden;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn-1 {
+            background-image: linear-gradient(120deg, #c8a1e0 0%, #674188 100%);
+        }
+
+        .btn-2 {
+
+            background-image: linear-gradient(120deg, #10aa1d 0%, #674188 100%);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            border-color: #fff9;
+        }
+
+
+        .button:hover::before {
+            animation: shine 1.5s ease-out infinite;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            background-image: linear-gradient(120deg,
+                    rgba(255, 255, 255, 0) 30%,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0) 70%);
+            top: 0;
+            left: -100px;
+            opacity: 0.6;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100px;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        input {
+            width: 400px;
+            height: 40px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+        }
+
+        /* From Uiverse.io by kamehame-ha */
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 15px;
+            gap: 15px;
+            background-color: rgb(188, 82, 188);
+            outline: 3px white;
+            outline-offset: -3px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 400ms;
+            width: 150px;
+        }
+
+        .btn .text {
+            color: white;
+            font-weight: 700;
+            font-size: 1em;
+            transition: 400ms;
+        }
+
+
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        .btn:hover .text {
+            color: #181717;
+        }
+        footer {
+        font-family: "Montserrat", serif;
+        background-color: rgb(248, 241, 233);
+        padding: 20px;
+      }
+
+      .foot-h3 {
+        color: rgb(164, 150, 130);
+      }
+      .foot-icon i {
+        color: orange;
+      }
+      .foot-icon i:hover {
+        color: rgb(231, 213, 191);
+        transition: 0.3s ease;
+      }
+      .foot-a a:hover {
+        color: orange;
+        transition: 0.3s ease;
+      }
+      .century-gothic {
+            font-family: 'Century Gothic', sans-serif;
+        }
+        .header-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://cdn.pixabay.com/photo/2024/04/05/05/17/people-8676555_640.jpg);
+        }
+        /* Mobile menu toggle */
+        #menu-toggle:checked ~ #mobile-menu {
+            display: block;
+        }
+        /* Dropdown menu */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .team-card:hover, .review-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header section  -->
+    <section id="header">
+        <header class="header-bg bg-cover bg-center h-screen relative overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-3">
+                <!-- Navigation -->
+                <nav class="flex items-center justify-between pt-6">
+                    <!-- Logo -->
+                    <div class="">
+                      <h1 class="text-white text-5xl"><b>V</b>isual <b>E</b>vents</h1>
+            
+                        
+                    </div>
+    
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex gap-4 text-white">
+                        <li><a href="./index.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">HOME</a></li>
+                        <li><a href="./About.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">ABOUT US</a></li>
+                        <li class="relative dropdown">
+                          <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                           SERVICES <i class="fa fa-caret-down"></i>
+                          </a>
+                          <div class="absolute hidden dropdown-menu bg-[00FFFFFF] min-w-[160px]">
+                              <ul class="py-2">
+                                  <li><a href="./wedding.html" class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a></li>
+                                  <li><a href="./birthday.html" class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a></li>
+                                  <li><a href="./workshop_seminars.html" class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP & SEMINAR</a></li>
+                                  <li><a href="./corporate.html" class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE EVENTS</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                        <li><a href="./gallery.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">GALLERY</a></li>
+                        <li><a href="./contact.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">CONTACT US</a></li>
+                    </ul> <div class="flex md:order-2 space-x-5 md:space-x-5 rtl:space-x-reverse">
+                      <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="login.html">Login</a></button>
+                  </div>
+                    
+    
+                    <!-- Navigation -->
+    <nav class="flex items-center justify-between pt-8 relative">
+      <!-- Logo -->
+      <!-- Mobile Menu Button -->
+      <label for="menu-toggle" class="md:hidden text-white text-2xl cursor-pointer">☰</label>
+      <input type="checkbox" id="menu-toggle" class="hidden">
+    
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-4 text-white">
+          <!-- ... desktop menu items same as before ... -->
+      </ul>
+    
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#002d75]/90 mt-4">
+          <ul class="flex flex-col items-center gap-4 text-white py-4">
+              <li class="w-full text-center">
+                  <a href="./index.html" class="block py-2 hover:bg-white hover:text-black">HOME</a>
+              </li>
+              <li class="w-full text-center">
+                  <a href="./About.html" class="block py-2 hover:bg-white hover:text-black">ABOUT US</a>
+              </li>
+              <li class="relative dropdown">
+                <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                 SERVICES <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="absolute hidden dropdown-menu bg-[#002d75] min-w-[160px]">
+                    <ul class="py-2">
+                        <li><a href="./wedding.html" class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a></li>
+                        <li><a href="./birthday.html" class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a></li>
+                        <li><a href="./workshop_seminars.html" class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP & SEMINAR</a></li>
+                        <li><a href="./corporate.html" class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE EVENTS</a></li>
+                    </ul>
+                </div>
+            </li>
+              <li class="w-full text-center">
+                  <a href="./gallery.html" class="block py-2 hover:bg-white hover:text-black">GALLERY</a>
+              </li>
+              <li class="w-full text-center">
+                  <a href="./contact.html" class="block py-2 hover:bg-white hover:text-black">CONTACT US</a>
+              </li>
+          </ul>
+      </div>
+      
+    </nav>
+                <!-- Text content -->
+        <div class=" font-serif text-white  absolute top-2/4 left-20">
+            <h1 class="font-extrabold text-5xl mb-5">
+                <span class="block">Workshop & Seminar</span>
+            </h1>
+            <h4 class="font-mono mt-12 max-w-4xl ">
+                Workshops and seminars in Kerala offer a unique opportunity to enhance skills, share knowledge, and
+                create memorable learning experiences. Our expert event organizers curate immersive sessions, capturing
+                every insightful moment, engaging discussion, and valuable takeaway to ensure your event leaves a
+                lasting impact. Let us help you make your next workshop or seminar a remarkable and unforgettable
+                experience.
+            </h4>
+            <div class="flex space-x-3 mt-10">
+                <button class="button btn-1"><i aria-hidden="true" class="fas fa-phone-volume"></i>
+                    Talk to Expert
+                </button>
+                <button class="button btn-2"><i aria-hidden="true" class="fab fa-whatsapp"></i></i>
+                    Whatsapp Us
+                </button>
+            </div>
+        </div>
+        </header>
+    </section>
+<!-- header end  -->
+
+    <hr>
+
+    <section>
+        <div class=" p-20">
+            <h1 class="text-violet-900 text-center pb-5 text-2xl">Exclusive Workshops & Seminars Amidst Kerala's
+                Breathtaking Backdrops</h1>
+            <p class="text-lg pb-5">Host your next workshop or seminar in the stunning landscapes of Kerala, where
+                nature’s beauty provides
+                the perfect setting for inspiration and learning. Our event management team ensures that every session
+                is not only informative but also set against a backdrop that enhances creativity and engagement, making
+                your event both productive and memorable.</p>
+            <img src="https://wdi.umich.edu/wp-content/uploads/08.10.2024-Leadership_Anna-Liminowicz-242126-scaled.jpg"
+                alt="">
+            <h1 class="text-center pt-5 font-bold text-2xl">Our Workshop & Seminar Event Management Services Include:</h1>
+            <h3 class="font-bold pt-5 text-xl">Event Planning & Coordination</h3>
+            <p class="pt-5 text-xl">Our expert planners take care of every detail, from venue selection to vendor management, guest
+                invitations, and event scheduling. We meticulously plan and coordinate the entire event, ensuring a
+                smooth and hassle-free experience for both organizers and attendees.</p>
+                <h3 class="font-bold pt-5 text-xl">Theme Development & Décor</h3>
+            <p class="pt-5 text-xl">We work closely with clients to develop a professional and inspiring ambiance that aligns with the
+                seminar or workshop’s objectives. From stage setup to branding elements, we create a cohesive décor plan
+                with appropriate lighting, banners, and thematic decorations to enhance the event’s impact.</p>
+                <h3 class="font-bold pt-5 text-xl">Audiovisual & Technical Support</h3>
+               
+            <p class="pt-5 text-xl">A successful workshop or seminar requires seamless audio-visual integration. We provide high-quality
+                sound systems, projectors, LED screens, and microphones, ensuring a flawless presentation experience.
+                Our technical team is on hand to troubleshoot and manage all AV requirements.</p>
+                <h3 class="font-bold pt-5 text-xl">Photography & Videography</h3>
+                <p class="pt-5 text-xl">Capture the best moments of your seminar or workshop with our professional photography and videography services. From live event coverage to post-event highlights, we ensure that every insightful moment is documented.</p>
+           <h3 class="font-bold pt-5 text-xl"> Equipment & Furniture Rentals</h3>
+           <p class="pt-5 text-xl">Need tables, chairs, podiums, or stage setups? We provide rental services for all necessary event equipment, ensuring a professional and organized environment for attendees.</p>
+        </div>
+
+    </section>
+
+    <hr>
+   
+
+
+    <section>
+        <div class="text-center bg-orange-100 p-5">
+            <h1 class="font-bold text-xl p-5">OUR BLOGS & ARTICLES</h1>
+            <p class="w-2/3 mx-auto text-center">XYZ Event Management’s website offers insights, tips, and stories on organizing impactful workshops and seminars in Kerala. From venue selection and speaker coordination to audience engagement and event success strategies, our articles help you plan seamless and engaging events.</p>
+            
+            <div class="flex space-x-8 item-center text-center justify-between ml-20 mr-20 mt-10">
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl">
+                    <img src="https://cdn.pixabay.com/photo/2014/07/06/09/37/lecture-385357_640.jpg"
+                        class="w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">How to Organize a Successful Workshop: Essential Tips for Event Planners</p>
+                    <p class="pb-10">Discover key strategies for planning an engaging and productive workshop, from selecting the right venue to optimizing audience participation.</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500">Learn More >></a>
+                </div>
+    
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl">
+                    <img src="https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_640.jpg"
+                        class="w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Choosing the Perfect Venue for Your Seminar in Kerala</p>
+                    <p class="pb-10">Learn how to select the ideal venue that aligns with your seminar’s objectives, ensuring a comfortable and professional atmosphere.</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500">Learn More >></a>
+                </div>
+    
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl">
+                    <img src="https://www.eventpro.net/images/teacher.jpeg"
+                        class="w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Engaging Activities to Make Your Workshop More Interactive</p>
+                    <p class="pb-10">Explore creative and interactive activities that keep participants engaged and ensure an impactful learning experience.</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500">Learn More >></a>
+                </div>
+            </div>
+    
+            <div class="flex space-x-8 item-center text-center justify-between ml-20 mr-20 mt-10">
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl">
+                    <img src="https://www.shutterstock.com/image-photo/corporate-development-seminar-business-people-260nw-2485558527.jpg"
+                        class="w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">The Role of Technology in Modern Workshops & Seminars</p>
+                    <p class="pb-10">Discover how digital tools, live streaming, and interactive tech solutions can enhance learning experiences in workshops and seminars.</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500">Learn More >></a>
+                </div>
+    
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl">
+                    <img src="https://pbs.twimg.com/profile_images/1672059714648133635/aDGQ_rwu_400x400.jpg"
+                        class="w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">How to Attract & Engage Audiences for Your Seminar</p>
+                    <p class="pb-10">Learn how to market and promote your seminar effectively to maximize attendance and engagement.</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500">Learn More >></a>
+                </div>
+    
+                <div class="w-[400px] h-[500px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl">
+                    <img src="https://cdn.pixabay.com/photo/2024/12/29/19/13/ai-generated-9298646_640.jpg"
+                        class="w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Post-Event Strategies: What to Do After Your Workshop</p>
+                    <p class="pb-10">Maximize the impact of your event with follow-up strategies, attendee feedback collection, and content repurposing.</p>
+                    <hr class="p-3">
+                    <a href="" class="text-blue-500">Learn More >></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer -->
+   <footer class=" ">
+    <div class="flex flex-col justify-center items-center px-5 pt-5">
+      <!-- row 1 -->
+      <h3 class="p-3 text-xl foot-h3">STAY SOCIAL</h3>
+
+      <div class="space-x-5 p-3 text-lg foot-icon">
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <p class="p-3 w-100 text-center text-md">
+        We’re dream weavers, memory makers, and celebration architects. With
+        over 500 successful events, we blend creativity, technology, and
+        passion to deliver extraordinary experiences that exceed expectations.
+        From premium corporate events and destination wedding planning to
+        small-scale birthday parties and private gatherings, you can be sure
+        we have it all covered.
+      </p>
+
+      <!-- row 2 -->
+
+      <div class="flex space-x-[200px] m-12">
+        <!-- quick link -->
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">QUICK LINKS</h5>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#service">Services</a>
+        </div>
+
+        <!-- other link -->
+
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">OTHER LINKS</h5>
+          <a href="#">Blog</a>
+          <a href="">Testimonials</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Refund Policy</a>
+        </div>
+
+        <!-- contact info -->
+
+        <div class="flex flex-col space-y-5 foot-a">
+          <h5 class="text-2xl mb-3">CONTACT INFO</h5>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-location-dot text-2xl basis-auto"></i>
+            <p class="basis-auto pl-3 w-50">
+              COCHIN BRANCH XYZ Event <br />Management, Kochi, Kerala, 682037
+            </p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-phone basis-auto"></i>
+            <p class="basis-auto pl-3">+123,456,789</p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-envelope basis-auto"></i>
+            <p class="basis-auto pl-3">xyz@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <hr
+        style="width: 100%; height: 2px; background-color: rgb(164, 150, 130)"
+      />
+      <p class="pt-2">© 2025, XYZ Events, All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

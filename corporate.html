@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corporate</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* From Uiverse.io by satyamchaudharydev */
+        .century-gothic {
+            font-family: 'Century Gothic', sans-serif;
+        }
+
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.pingpongmoments.in/blog/wp-content/uploads/2022/09/corporate-events-3.jpg);
+        }
+
+        /* Mobile menu toggle */
+        #menu-toggle:checked~#mobile-menu {
+            display: block;
+        }
+
+        /* Dropdown menu */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .team-card:hover,
+        .review-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            padding-block: 0.5rem;
+            padding-inline: 1.25rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffff;
+            gap: 10px;
+            font-weight: bold;
+            border: 3px solid #ffffff4d;
+            outline: none;
+            overflow: hidden;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .btn-1 {
+            background-image: linear-gradient(120deg, #c8a1e0 0%, #674188 100%);
+        }
+
+        .btn-2 {
+
+            background-image: linear-gradient(120deg, #10aa1d 0%, #674188 100%);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            border-color: #fff9;
+        }
+
+
+        .button:hover::before {
+            animation: shine 1.5s ease-out infinite;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            background-image: linear-gradient(120deg,
+                    rgba(255, 255, 255, 0) 30%,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0) 70%);
+            top: 0;
+            left: -100px;
+            opacity: 0.6;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100px;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        input {
+            width: 400px;
+            height: 40px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+        }
+
+        /* From Uiverse.io by kamehame-ha */
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 15px;
+            gap: 15px;
+            background-color: rgb(188, 82, 188);
+            outline: 3px white;
+            outline-offset: -3px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 400ms;
+            width: 150px;
+        }
+
+        .btn .text {
+            color: white;
+            font-weight: 700;
+            font-size: 1em;
+            transition: 400ms;
+        }
+
+
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        .btn:hover .text {
+            color: #181717;
+        }
+        footer {
+        font-family: "Montserrat", serif;
+        background-color: rgb(248, 241, 233);
+        padding: 20px;
+      }
+
+      .foot-h3 {
+        color: rgb(164, 150, 130);
+      }
+      .foot-icon i {
+        color: orange;
+      }
+      .foot-icon i:hover {
+        color: rgb(231, 213, 191);
+        transition: 0.3s ease;
+      }
+      .foot-a a:hover {
+        color: orange;
+        transition: 0.3s ease;
+      }
+    </style>
+</head>
+
+<body>
+
+    <!-- header section  -->
+    <section id="header">
+        <header class="header-bg bg-cover bg-center h-screen relative overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-3">
+                <!-- Navigation -->
+                <nav class="flex items-center justify-between pt-6">
+                    <!-- Logo -->
+                    <div class="">
+                        <h1 class="text-white text-5xl"><b>V</b>isual <b>E</b>vents</h1>
+
+
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex gap-4 text-white">
+                        <li><a href="./index.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">HOME</a></li>
+                        <li><a href="./About.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">ABOUT US</a></li>
+                        <li class="relative dropdown">
+                            <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                                SERVICES <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="absolute hidden dropdown-menu bg-[00FFFFFF] min-w-[160px]">
+                                <ul class="py-2">
+                                    <li><a href="./wedding.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a></li>
+                                    <li><a href="./birthday.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a></li>
+                                    <li><a href="./workshop_seminars.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP &
+                                            SEMINAR</a></li>
+                                    <li><a href="./corporate.html"
+                                            class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE EVENTS</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="./gallery.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">GALLERY</a></li>
+                        <li><a href="./contact.html"
+                                class="px-5 py-1 hover:bg-white hover:text-black transition-colors">CONTACT US</a></li>
+                    </ul>
+                    <div class="flex md:order-2 space-x-5 md:space-x-5 rtl:space-x-reverse">
+                        <button type="button"
+                            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a
+                                href="login.html">Login</a></button>
+                    </div>
+
+
+                    <!-- Navigation -->
+                    <nav class="flex items-center justify-between pt-8 relative">
+                        <!-- Logo -->
+                        <!-- Mobile Menu Button -->
+                        <label for="menu-toggle" class="md:hidden text-white text-2xl cursor-pointer">☰</label>
+                        <input type="checkbox" id="menu-toggle" class="hidden">
+
+                        <!-- Desktop Menu -->
+                        <ul class="hidden md:flex gap-4 text-white">
+                            <!-- ... desktop menu items same as before ... -->
+                        </ul>
+
+                        <!-- Mobile Menu -->
+                        <div id="mobile-menu"
+                            class="hidden md:hidden absolute top-full left-0 right-0 bg-[#002d75]/90 mt-4">
+                            <ul class="flex flex-col items-center gap-4 text-white py-4">
+                                <li class="w-full text-center">
+                                    <a href="./index.html" class="block py-2 hover:bg-white hover:text-black">HOME</a>
+                                </li>
+                                <li class="w-full text-center">
+                                    <a href="./About.html" class="block py-2 hover:bg-white hover:text-black">ABOUT
+                                        US</a>
+                                </li>
+                                <li class="relative dropdown">
+                                    <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                                        SERVICES <i class="fa fa-caret-down"></i>
+                                    </a>
+                                    <div class="absolute hidden dropdown-menu bg-[#002d75] min-w-[160px]">
+                                        <ul class="py-2">
+                                            <li><a href="./wedding.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a>
+                                            </li>
+                                            <li><a href="./birthday.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a>
+                                            </li>
+                                            <li><a href="./workshop_seminars.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP &
+                                                    SEMINAR</a></li>
+                                            <li><a href="./corporate.html"
+                                                    class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE
+                                                    EVENTS</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="w-full text-center">
+                                    <a href="./gallery.html"
+                                        class="block py-2 hover:bg-white hover:text-black">GALLERY</a>
+                                </li>
+                                <li class="w-full text-center">
+                                    <a href="./contact.html" class="block py-2 hover:bg-white hover:text-black">CONTACT
+                                        US</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                    <!-- Title Section -->
+                    <div class=" font-serif text-white  absolute top-2/4 left-20">
+                        <h1 class="font-extrabold text-5xl mb-5">
+                            <span class="block">Corporate Event Management</span>
+                        </h1>
+                        <h2 class="font-mono mt-12 text-3xl ">
+                            We deliver exclusive corporate event management services & priceless memories
+                        </h2>
+                        <div class="flex space-x-3 mt-10">
+                            <button class="button btn-1"><i aria-hidden="true" class="fas fa-phone-volume"></i>
+                                Talk to Expert
+                            </button>
+                            <button class="button btn-2"><i aria-hidden="true" class="fab fa-whatsapp"></i></i>
+                                Whatsapp Us
+                            </button>
+                        </div>
+                    </div>
+        </header>
+    </section>
+    <!-- header end  -->
+    <hr>
+
+    <section>
+        <div class="flex mt-5 ml-20 mr-20 h-[500px]">
+            <div class="mt-20">
+                <img src="https://cdn-efhkn.nitrocdn.com/WXAzfHUqZWhmiwPlIvwPZLqSPbESTXhT/assets/images/optimized/rev-93a421f/advan.in/wp-content/uploads/2022/09/corporate-event-management-16.jpg"
+                    class="w-4/5 h-5/5" alt="">
+            </div>
+            <div class="w-2/4 mt-10 pt-10">
+                <h2 class="text-violet-900 text-xl pt-8">CORPORATE EVENTS MANAGEMENT</h2>
+                <p class="text-violet-950 mb-2 pt-10">Events are great opportunities for any business to gather people,
+                    share ideas, and spread the word about its brand. We are one of the top corporate event management
+                    companies in India, well-versed in planning different corporate events.</p>
+                <p class="text-violet-950 mb-2 pt-5">AD Vantage corporate event organisers in bangalore organise vibrant
+                    events, paying close attention to every last detail. For us, your event is much more than a
+                    gathering. When we organize your event, at every nook and corner, it will speak about your business.
+                    Contact AD Vantage corporate event company for flawless event planning and execution.</p>
+            </div>
+        </div>
+
+        <div class="flex mt-5 ml-10 h-[500px]">
+            <div class="w-2/4 mt-20 pt-5 pr-2">
+                <h2 class="text-violet-900 text-xl pt-5 pr-5">EVENT CORPORATIONS</h2>
+                <p class=" mb-2 pt-10">AD Vantage is one of the best corporate event management companies in Bangalore
+                    that gives the clients desired exposure and brand awareness. Our corporate event planning ideas are
+                    detail-oriented and drive the highest level of satisfaction to the attendees. Nothing goes wrong if
+                    you leave your event to the right hands. We are the finest corporate event management Bangalore that
+                    gives your attendees a classy and slick event experience. Do you want professionals to manage your
+                    next event? Trust our corporate event services when you are unsure about organising a fabulous event
+                    for your business.</p>
+
+            </div>
+            <div class="mt-20">
+                <img src="https://cdn-efhkn.nitrocdn.com/WXAzfHUqZWhmiwPlIvwPZLqSPbESTXhT/assets/images/optimized/rev-93a421f/advan.in/wp-content/uploads/2022/09/corporate-event-management-21.jpg"
+                    class="w-4/5 h-5/5" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex space-x-5 p-5 mb-20">
+            <div class="bg-yellow-100 p-5">
+                <h1 class="text-center font-bold text-lg p-5">Clear Cut Goals</h1>
+                <p class="">We prioritise the purpose of corporate events and your business goals. We define it with
+                    exceptional corporate event management tips.</p>
+            </div>
+            <div class="bg-yellow-100 p-5">
+                <h1 class="text-center font-bold text-lg p-5">Realistic Event Budgeting</h1>
+                <p>We incorporate sophisticated corporate event planning tools and come up with realistic budgeting for
+                    your dream events.</p>
+            </div>
+            <div class="bg-yellow-100 p-5">
+                <h1 class="text-center font-bold text-lg p-5">Inimitable Event Marketing</h1>
+                <p>Our corporate event management team knows how to drive demand to your events. We achieve it with our
+                    unique event marketing strategies.</p>
+            </div>
+            <div class="bg-yellow-100 p-5">
+                <h1 class="text-center font-bold text-lg p-5">Greater Attendee Engagement</h1>
+                <p>We are smart in engaging the attendees with stellar corporate event management ideas that takes your
+                    event to the sky.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="text-center">OUR PROJECTS</h1>
+        <div class="bg-blue-100 flex m-10 h-[600px] text-center">
+            <div class="pt-6 pl-5">
+                <img class="w-[400px] h-[550px]"
+                    src="https://cdn-efhkn.nitrocdn.com/WXAzfHUqZWhmiwPlIvwPZLqSPbESTXhT/assets/images/optimized/rev-93a421f/advan.in/wp-content/uploads/2022/09/corporate-event-management-13.jpg"
+                    alt="">
+            </div>
+            <div>
+                <div class="flex space-x-3 pt-6 pl-2">
+                    <div>
+                        <img class="w-[450px] h-[260px]"
+                            src="https://media.licdn.com/dms/image/D4D12AQFI09pPbqbuAg/article-cover_image-shrink_600_2000/0/1697714978117?e=2147483647&v=beta&t=0Q1tc_YH73jzhCSfDQadg7DQB1CRKfSjP-3yoi4On0E"
+                            alt="">
+                    </div>
+                    <div>
+                        <img class="w-[450px] h-[260px]"
+                            src="https://img.freepik.com/free-photo/people-taking-part-business-event_23-2149333734.jpg?ga=GA1.1.1395436390.1734599681&semt=ais_hybrid"
+                            alt="">
+                    </div>
+                </div>
+                <div class="flex space-x-3 pt-6 pl-2">
+                    <div>
+                        <img class="w-[450px] h-[260px]"
+                            src="https://img.freepik.com/premium-photo/business-executive-taking-coffee-from-coffee-maker_107420-73048.jpg?ga=GA1.1.1395436390.1734599681&semt=ais_hybrid"
+                            alt="">
+                    </div>
+                    <div>
+                        <img class="w-[450px] h-[260px]"
+                            src="https://thumbs.dreamstime.com/b/healthy-organic-gluten-free-delicious-green-snacks-salads-catering-table-corporate-event-party-party%C3%B1%C5%BE-118827665.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="text-center font-bold text-2xl text-green-600">Sit back & relax, we organise all these for you</h1>
+        <div class="flex space-x-5 p-5 mb-10">
+            <div class="p-5 justify-items-center">
+                <img src="https://cdn-icons-png.freepik.com/512/8384/8384571.png" class="w-[60px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">Product Launches</h1>
+                <p>Don’t you want your product launch to be a stellar event? AD Vantage makes your event a hit with
+                    mind-blowing corporate event planning ideas.</p>
+            </div>
+            <div class="p-5 justify-items-center">
+                <img src="https://icones.pro/wp-content/uploads/2022/07/icone-de-poignee-de-main-verte.png"
+                    class="w-[60px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">Dealers Meet</h1>
+                <p>Energise and reward your dealers with ravishing dealer meets. We are the leading corporate event
+                    planners in Bangalore for your dealer meet events.</p>
+            </div>
+            <div class="p-5 justify-items-center">
+                <img src="https://png.pngtree.com/png-vector/20231201/ourmid/pngtree-store-icon-home-png-image_10797585.png"
+                    class="w-[60px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">Store Openings</h1>
+                <p>Opening your dream store? Do it with grand ideas from AD Vantage, the best corporate event management
+                    company in Bangalore.</p>
+            </div>
+            <div class="p-5 justify-items-center">
+                <img src="https://icones.pro/wp-content/uploads/2022/03/icone-de-construction-et-de-batiment-verte.png"
+                    class="w-[60px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">Corporate Events</h1>
+                <p>We are the top corporate event management company Bangalore, trusted by leading corporates for their
+                    big events.</p>
+            </div>
+        </div>
+
+        <div class="flex space-x-5 p-5 mb-20">
+            <div class="p-5 justify-items-center">
+                <img src="https://www.pngplay.com/wp-content/uploads/9/Winner-Ribbon-Award-Transparent-Free-PNG.png"
+                    class="w-[60px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">Award Shows</h1>
+                <p>Don’t you want your product launch to be a stellar event? AD Vantage makes your event a hit with
+                    mind-blowing corporate event planning ideas.</p>
+            </div>
+            <div class=" justify-items-center">
+                <img src="https://png.pngtree.com/png-vector/20220617/ourmid/pngtree-initial-letter-a-with-leaf-logo-png-image_5115087.png"
+                    class="w-[90px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">MICE Events</h1>
+                <p>We have creative corporate event planning tips to bring professionals together, foster connections,
+                    and promote new ideas at your MICE events.</p>
+            </div>
+            <div class="p-5 justify-items-center">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRzSUO8vY9Q2D2Twuu-XvbXs85O0QKNDYPNTSor1f0iE62k9jaf"
+                    class="w-[70px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">Exhibitions</h1>
+                <p>Exhibitions are all about the industry, not just your business itself. Make your exhibitions the best
+                    with our corporate event planning services.</p>
+            </div>
+            <div class="p-5 justify-items-center">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRzsj8erBwL0iQTMrI1tNn4LoESYYFuhkzqmbE4sZ6yaw1LUyo_"
+                    class="w-[60px]" alt="">
+                <h1 class="text-center font-bold text-lg p-5">Corporate Events</h1>
+                <p>We are the top corporate event management company Bangalore, trusted by leading corporates for their
+                    big events.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="flex space-3 bg-yellow-200 h-[500px]">
+            <div class="text-black-100 w-[500px] mt-20 ml-60 ">
+
+                <h1 class="font-extrabold text-4xl mb-5 mt-5">
+                    <span class="block">Submit & See</span>
+
+                </h1>
+                <p class="font-mono mt-10 max-w-4xl">Fill the form to recognise your unique identity. Fear not, when AD
+                    Vantage, is with you. Opt for the best retail branding agency in India as your prime choice for
+                    further growth.</p>
+            </div>
+            <div class="w-[500px] ml-40 mt-20">
+                <form action="">
+                    <input type="text" placeholder="Enter your Full Name"><br><br>
+                    <input type="text" placeholder="Enter your Phone Number"><br><br>
+                    <input type="email" placeholder="Enter your Email ID"><br><br>
+                    <textarea name="message" id="" placeholder="Message"></textarea><br><br>
+                    <!-- From Uiverse.io by kamehame-ha -->
+                    <button class="btn bg-orange-300 ">
+                        <p class="text">Submit</p>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<!-- footer -->
+<footer class=" ">
+    <div class="flex flex-col justify-center items-center px-5 pt-5">
+      <!-- row 1 -->
+      <h3 class="p-3 text-xl foot-h3">STAY SOCIAL</h3>
+
+      <div class="space-x-5 p-3 text-lg foot-icon">
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <p class="p-3 w-100 text-center text-md">
+        We’re dream weavers, memory makers, and celebration architects. With
+        over 500 successful events, we blend creativity, technology, and
+        passion to deliver extraordinary experiences that exceed expectations.
+        From premium corporate events and destination wedding planning to
+        small-scale birthday parties and private gatherings, you can be sure
+        we have it all covered.
+      </p>
+
+      <!-- row 2 -->
+
+      <div class="flex space-x-[200px] m-12">
+        <!-- quick link -->
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">QUICK LINKS</h5>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#service">Services</a>
+        </div>
+
+        <!-- other link -->
+
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">OTHER LINKS</h5>
+          <a href="#">Blog</a>
+          <a href="">Testimonials</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Refund Policy</a>
+        </div>
+
+        <!-- contact info -->
+
+        <div class="flex flex-col space-y-5 foot-a">
+          <h5 class="text-2xl mb-3">CONTACT INFO</h5>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-location-dot text-2xl basis-auto"></i>
+            <p class="basis-auto pl-3 w-50">
+              COCHIN BRANCH XYZ Event <br />Management, Kochi, Kerala, 682037
+            </p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-phone basis-auto"></i>
+            <p class="basis-auto pl-3">+123,456,789</p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-envelope basis-auto"></i>
+            <p class="basis-auto pl-3">xyz@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <hr
+        style="width: 100%; height: 2px; background-color: rgb(164, 150, 130)"
+      />
+      <p class="pt-2">© 2025, XYZ Events, All Rights Reserved</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

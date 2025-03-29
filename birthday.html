@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <!-- icon -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+        /* From Uiverse.io by satyamchaudharydev */
+        .button {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            padding-block: 0.5rem;
+            padding-inline: 1.25rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffff;
+            gap: 10px;
+            font-weight: bold;
+            border: 3px solid #ffffff4d;
+            outline: none;
+            overflow: hidden;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn-1 {
+            background-image: linear-gradient(120deg, #c8a1e0 0%, #674188 100%);
+        }
+
+        .btn-2 {
+
+            background-image: linear-gradient(120deg, #10aa1d 0%, #674188 100%);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            border-color: #fff9;
+        }
+
+
+        .button:hover::before {
+            animation: shine 1.5s ease-out infinite;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            background-image: linear-gradient(120deg,
+                    rgba(255, 255, 255, 0) 30%,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0) 70%);
+            top: 0;
+            left: -100px;
+            opacity: 0.6;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100px;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        input {
+            width: 400px;
+            height: 40px;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+        }
+
+        /* From Uiverse.io by kamehame-ha */
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 15px;
+            gap: 15px;
+            background-color: rgb(188, 82, 188);
+            outline: 3px white;
+            outline-offset: -3px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 400ms;
+            width: 150px;
+        }
+
+        .btn .text {
+            color: white;
+            font-weight: 700;
+            font-size: 1em;
+            transition: 400ms;
+        }
+
+
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        .btn:hover .text {
+            color: #181717;
+        }
+        footer {
+        font-family: "Montserrat", serif;
+        background-color: rgb(248, 241, 233);
+        padding: 20px;
+      }
+
+      .foot-h3 {
+        color: rgb(164, 150, 130);
+      }
+      .foot-icon i {
+        color: orange;
+      }
+      .foot-icon i:hover {
+        color: rgb(231, 213, 191);
+        transition: 0.3s ease;
+      }
+      .foot-a a:hover {
+        color: orange;
+        transition: 0.3s ease;
+      }
+
+      century-gothic {
+            font-family: 'Century Gothic', sans-serif;
+        }
+        .header-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.squarespace-cdn.com/content/v1/65f3e83d23913465da721884/1720095242964-FNVLY6O4V79EKXD6H8IB/slider_birthday_parties.jpg);
+        }
+        /* Mobile menu toggle */
+        #menu-toggle:checked ~ #mobile-menu {
+            display: block;
+        }
+        /* Dropdown menu */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .team-card:hover, .review-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header section  -->
+    <section id="header">
+        <header class="header-bg bg-cover bg-center h-screen relative overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-3">
+                <!-- Navigation -->
+                <nav class="flex items-center justify-between pt-8">
+                    <!-- Logo -->
+                    <div class="">
+                      <h1 class="text-white text-5xl"><b>V</b>isual <b>E</b>vents</h1>
+            
+                        
+                    </div>
+    
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex gap-4 text-white">
+                        <li><a href="./index.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">HOME</a></li>
+                        <li><a href="./About.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">ABOUT US</a></li>
+                        <li class="relative dropdown">
+                          <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                           SERVICES <i class="fa fa-caret-down"></i>
+                          </a>
+                          <div class="absolute hidden dropdown-menu bg-[00FFFFFF] min-w-[160px]">
+                              <ul class="py-2">
+                                  <li><a href="./wedding.html" class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a></li>
+                                  <li><a href="./birthday.html" class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a></li>
+                                  <li><a href="./workshop_seminars.html" class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP & SEMINAR</a></li>
+                                  <li><a href="./corporate.html" class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE EVENTS</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                        <li><a href="./gallery.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">GALLERY</a></li>
+                        <li><a href="./contact.html" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">CONTACT US</a></li>
+                    </ul> <div class="flex md:order-2 space-x-5 md:space-x-5 rtl:space-x-reverse">
+                      <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><a href="login.html">Login</a></button>
+                  </div>
+                    
+    
+                    <!-- Navigation -->
+    <nav class="flex items-center justify-between pt-8 relative">
+      <!-- Logo -->
+      <!-- Mobile Menu Button -->
+      <label for="menu-toggle" class="md:hidden text-white text-2xl cursor-pointer">☰</label>
+      <input type="checkbox" id="menu-toggle" class="hidden">
+    
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-4 text-white">
+          <!-- ... desktop menu items same as before ... -->
+      </ul>
+    
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#002d75]/90 mt-4">
+          <ul class="flex flex-col items-center gap-4 text-white py-4">
+              <li class="w-full text-center">
+                  <a href="./index.html" class="block py-2 hover:bg-white hover:text-black">HOME</a>
+              </li>
+              <li class="w-full text-center">
+                  <a href="./About.html" class="block py-2 hover:bg-white hover:text-black">ABOUT US</a>
+              </li>
+              <li class="relative dropdown">
+                <a href="#" class="px-5 py-1 hover:bg-white hover:text-black transition-colors">
+                 SERVICES <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="absolute hidden dropdown-menu bg-[#002d75] min-w-[160px]">
+                    <ul class="py-2">
+                        <li><a href="./wedding.html" class="block px-4 py-2 hover:bg-white hover:text-black">WEDDING</a></li>
+                        <li><a href="./birthday.html" class="block px-4 py-2 hover:bg-white hover:text-black">BIRTHDAY</a></li>
+                        <li><a href="./workshop_seminars.html" class="block px-4 py-2 hover:bg-white hover:text-black">WORKSHOP & SEMINAR</a></li>
+                        <li><a href="./corporate.html" class="block px-4 py-2 hover:bg-white hover:text-black">CORPRATE EVENTS</a></li>
+                    </ul>
+                </div>
+            </li>
+              <li class="w-full text-center">
+                  <a href="./gallery.html" class="block py-2 hover:bg-white hover:text-black">GALLERY</a>
+              </li>
+              <li class="w-full text-center">
+                  <a href="./contact.html" class="block py-2 hover:bg-white hover:text-black">CONTACT US</a>
+              </li>
+          </ul>
+      </div>
+      
+    </nav>
+                <!-- Title Section -->
+                <div class=" font-serif text-white  absolute top-2/4 left-20">
+                    <h1 class="font-extrabold text-5xl mb-5">
+                        <span class="block">Birthday Party Planners in Kerala</span>
+                    </h1>
+                    <h4 class="font-mono mt-12 max-w-4xl ">
+                        Planning a birthday party can be an exciting yet overwhelming experience. That’s where our
+                        birthday
+                        party planners come in – like the fairy godmothers of celebrations, we wave our magic wand to
+                        bring your
+                        dream birthday party to life, creating memories that last a lifetime!
+                    </h4>
+                    <div class="flex space-x-3 mt-10">
+                        <button class="button btn-1"><i aria-hidden="true" class="fas fa-phone-volume"></i>
+                            Talk to Expert
+                        </button>
+                        <button class="button btn-2"><i aria-hidden="true" class="fab fa-whatsapp"></i></i>
+                            Whatsapp Us
+                        </button>
+                    </div>
+                </div>
+        </header>
+    </section>
+<!-- header end  -->
+    <hr>
+
+    <section>
+        <div class="flex mt-5 ml-20 h-[500px]">
+            <div class="w-2/4 mt-20 ml-20">
+                <h1 class="text-2xl mt-2 mb-2">Magical Birthday Parties Come to Life with XYZ Events: Your Premier
+                    Birthday Planners in Kerala</h1>
+                <p class="text-violet-950 mb-2">XYZ’s birthday party planners in Kerala, India, offer a wide range of
+                    services to help you create the perfect celebration. We begin by understanding your ideas and
+                    vision, then work our magic to turn those dreams into an unforgettable birthday party.</p>
+                <p class="text-violet-950 mb-2">XYZ’s birthday event planners and managers provide professional services
+                    to plan, organize, and execute your special day seamlessly. We collaborate closely with you to
+                    understand your preferences, theme, and budget, ensuring a personalized and memorable birthday
+                    celebration.</p>
+            </div>
+            <div class="mt-20">
+                <img src="https://media.istockphoto.com/id/1058378986/photo/birthday-boy.jpg?s=612x612&w=0&k=20&c=tpXbDZRK2eT_vG8Tt0KdAOomtMU3dT3BTajj4TJr92w="
+                    class="w-4/5 h-5/5" alt="">
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section class="bg-red-50">
+        <div class="flex mt-5 bg-red-50 h-[500px] ml-20 mr-20">
+            <div class="mt-20  mb-5 ml-20">
+                <img src="https://cdn.pixabay.com/photo/2022/08/02/18/30/birthday-party-7361026_1280.jpg"
+                    class="w-[1500px] h-[400px] object-cover" alt="">
+            </div>
+            <div class="mt-20 ml-40 text-lg  text-slate-700 pr-20 ">
+                <p>In India, think of birthday party planners in Kerala as superheroes, swooping in to save the day and
+                    take care of everything—from venue selection to vendor management, budget planning to design and
+                    décor, timeline coordination to entertainment, and even post-party cleanup. We ensure every detail
+                    is accounted for and every moment perfectly planned.</p>
+                <p class="mt-2">Whether you’re dreaming of a grand birthday bash, a fun-filled theme party, or something
+                    unique in between, Melodia’s birthday party planners in Kerala, India, are here to make it happen.
+                    We work tirelessly behind the scenes to create a birthday celebration that is truly special and
+                    tailored just for you—a day that you and your guests will remember for years to come.</p>
+                <p>So, if you’re feeling overwhelmed by the endless details and decisions that go into planning a
+                    birthday party, call us—the fairy godmothers and superheroes of celebrations—to turn your dream
+                    birthday party into a reality!</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="mt-5 h-[1000px] ml-20 mr-20">
+            <div class="mt-20 pl-20 text-lg text-slate-700 pr-20">
+                <h1>Mayjohn P. J., the Owner of Melodia Event Management Company, Creates Unforgettable Birthday
+                    Celebrations</h1>
+                <p>Mr. Mayjohn P. J. endeavors to bring joy and create truly memorable experiences for everyone
+                    celebrating their special day. His passion lies in spreading happiness across Southern India through
+                    expertly planned birthday parties and events.</p>
+                <p class="mt-2">In Southern India, especially in Kerala, entertainment has become a central element of
+                    birthday celebrations. Various forms of entertainment, such as live music bands, cultural dances,
+                    DJs, magicians, themed decorations, puppet shows, and even traditional performances like oppana,
+                    bharatanatyam, mohiniyattom, and kathakali, are incorporated into birthday parties. These vibrant
+                    forms of entertainment are embraced by all communities, including Hindus, Christians, and Muslims,
+                    ensuring a delightful and inclusive celebration for everyone.</p>
+                <p>At Melodia Event Management Company, Mr. Mayjohn P. J., also known as Mayjohn Pindiyan, fondly
+                    recalls an extraordinary birthday celebration organized by Melodia. This memorable event was
+                    highlighted by the esteemed American newspaper, The New York Times, for its seamless execution,
+                    unique entertainment, and attention to detail.</p>
+                <p>One notable event was the grand birthday party organized for Dr. Pfizer’s granddaughter, an esteemed
+                    client of Melodia Events. Associated with the World Health Organization (WHO), Dr. Pfizer entrusted
+                    Melodia with planning and executing an unforgettable birthday celebration in Kerala. This event,
+                    held shortly after the COVID-19 pandemic, showcased Melodia’s commitment to adhering to all COVID-19
+                    protocols and government regulations.</p>
+                <p>Melodia Event Management Company ensured every detail was perfect, providing personalized care and
+                    full support to Dr. Pfizer and their family. From creative themes and meticulous planning to
+                    top-tier entertainment and security, Melodia Events demonstrated their dedication to creating safe,
+                    joyous, and unforgettable birthday parties for their clients.</p>
+            </div>
+            <!-- Centered video -->
+            <div class="flex justify-center items-center mt-20">
+                <iframe width="1400" height="400" src="https://www.youtube.com/embed/-2EtqzWP878?si=98pCWy9NmSy0HMgM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="text-center bg-orange-100 p-5">
+            <h1 class="font-bold text-xl p-5">A Premium Destination for Your Dream Birthday Celebration</h1>
+            <p class="w-2/3 mx-auto text-center">Kerala, known as “God’s Own Country,” has become a top destination for unforgettable birthday celebrations. With its lush landscapes, tranquil backwaters, scenic hill stations like Munnar, Vagamon, and Wayanad, and pristine beaches surrounded by coconut trees, Kerala offers an idyllic setting for an extraordinary birthday experience.</p>
+            <div class="flex space-x-8 item-center text-center justify-between ml-20 mr-20 mt-10  ">
+                <div class="w-[400px] h-[400px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://i.pinimg.com/originals/41/ed/75/41ed7593363a5a13154573673da5f762.jpg"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Birthday Stage Decoration
+                    </p>
+                    <div class="flex space-x-3 mt-5 pl-8">
+                        <button class="text-blue-500"></i>
+                            Learn More >>
+                        </button>
+                        <button class="button btn-2"><i aria-hidden="true" class="fab fa-whatsapp"></i></i>
+                            Whatsapp Enquiry
+                        </button>
+                    </div>
+                </div>
+                <div class="w-[400px] h-[400px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://eventsmanagementkerala.com/wp-content/uploads/elementor/thumbs/cinimatic-dance111-q7lsjv225d6o4ob8pxqn7ueoffem1nnskon0p39jg2.webp"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1" alt="">
+                    <p class="font-bold p-5">Dance Performances
+                    </p>
+                    <div class="flex space-x-3 mt-5 pl-8">
+                        <button class="text-blue-500"></i>
+                            Learn More >>
+                        </button>
+                        <button class="button btn-2"><i aria-hidden="true" class="fab fa-whatsapp"></i></i>
+                            Whatsapp Enquiry
+                        </button>
+                    </div>
+                </div>
+                <div class="w-[400px] h-[400px] bg-white rounded-lg drop-shadow-md hover:drop-shadow-xl ">
+                    <img src="https://eventsmanagementkerala.com/wp-content/uploads/elementor/thumbs/Live-Stream-Your-Wedding-Fusion-Sound-Light-q5t8snxoznixru5kbimz7xxed587cmbodwcf4zns8i.webp"
+                        class=" w-[400px] h-[250px] border-yellow-400 rounded-lg p-1"
+                        alt="">
+                    <p class="font-bold p-5">Live Streaming Services for Birthday 
+                    </p>
+                    <div class="flex space-x-3 mt-5 pl-8">
+                        <button class="text-blue-500"></i>
+                            Learn More >>
+                        </button>
+                        <button class="button btn-2"><i aria-hidden="true" class="fab fa-whatsapp"></i></i>
+                            Whatsapp Enquiry
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <hr>
+    <section>
+        <div class="flex space-3 bg-fuchsia-900 h-[500px]">
+            <div class="text-neutral-100 w-[500px] mt-20 ml-60">
+                <h1 class="font-mono mt-5 max-w-4xl">Capture Your Perfect Birthday Moments with ####</h1>
+                <h1 class="font-extrabold text-4xl mb-5 mt-5">
+                    <span class="block">Book Your Kerala Birthday</span>
+                    <span class="block">Photographers Today!</span>
+                </h1>
+                <p class="font-mono mt-10 max-w-4xl">Contact us now to share your ideas and secure the perfect
+                    photographer
+                    for your special day. Don’t wait—your unforgettable celebration begins with Melodia!</p>
+            </div>
+            <div class="w-[500px] ml-40 mt-20">
+                <form action="">
+                    <input type="text" placeholder="Enter your Full Name"><br><br>
+                    <input type="text" placeholder="Enter your Phone Number"><br><br>
+                    <input type="email" placeholder="Enter your Email ID"><br><br>
+                    <textarea name="message" id="" placeholder="Message"></textarea><br><br>
+                    <!-- From Uiverse.io by kamehame-ha -->
+                    <button class="btn">
+                        <p class="text">Submit</p>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+   <footer class=" ">
+    <div class="flex flex-col justify-center items-center px-5 pt-5">
+      <!-- row 1 -->
+      <h3 class="p-3 text-xl foot-h3">STAY SOCIAL</h3>
+
+      <div class="space-x-5 p-3 text-lg foot-icon">
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <p class="p-3 w-100 text-center text-md">
+        We’re dream weavers, memory makers, and celebration architects. With
+        over 500 successful events, we blend creativity, technology, and
+        passion to deliver extraordinary experiences that exceed expectations.
+        From premium corporate events and destination wedding planning to
+        small-scale birthday parties and private gatherings, you can be sure
+        we have it all covered.
+      </p>
+
+      <!-- row 2 -->
+
+      <div class="flex space-x-[200px] m-12">
+        <!-- quick link -->
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">QUICK LINKS</h5>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#service">Services</a>
+        </div>
+
+        <!-- other link -->
+
+        <div class="grid grid-rows-5 pr-5 foot-a">
+          <h5 class="text-2xl mb-3">OTHER LINKS</h5>
+          <a href="#">Blog</a>
+          <a href="">Testimonials</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Refund Policy</a>
+        </div>
+
+        <!-- contact info -->
+
+        <div class="flex flex-col space-y-5 foot-a">
+          <h5 class="text-2xl mb-3">CONTACT INFO</h5>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-location-dot text-2xl basis-auto"></i>
+            <p class="basis-auto pl-3 w-50">
+              COCHIN BRANCH XYZ Event <br />Management, Kochi, Kerala, 682037
+            </p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-phone basis-auto"></i>
+            <p class="basis-auto pl-3">+123,456,789</p>
+          </div>
+
+          <div class="flex items-center foot-icon">
+            <i class="fa-solid fa-envelope basis-auto"></i>
+            <p class="basis-auto pl-3">xyz@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <hr
+        style="width: 100%; height: 2px; background-color: rgb(164, 150, 130)"
+      />
+      <p class="pt-2">© 2025, XYZ Events, All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
